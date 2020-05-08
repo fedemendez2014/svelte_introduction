@@ -2,6 +2,10 @@
   import About from "./components/About.svelte";
   import Text from "./components/Text.svelte";
   import Person from "./components/Person.svelte";
+  import Skills from "./components/Skills.svelte";
+  import Input from "./components/Input.svelte";
+  import Photos from "./components/Photos.svelte";
+  import ButtonCount from "./components/ButtonCount.svelte";
 
   export let name;
   export let lastname;
@@ -22,6 +26,11 @@
 
   :global(:root) {
     --theme-color: purple;
+  }
+
+  :global(body.dark-mode) {
+    background-color: #1d3040;
+    color: #bfc2c7;
   }
 
   p {
@@ -60,5 +69,9 @@
   <Text anotherText="Prueba" />
   <Text />
   <Person {...data} />
+  <Skills />
+  <Input />
+  <ButtonCount />
+  <Photos />
   <img src={svelteLogo} alt="Svelte" />
 </main>
